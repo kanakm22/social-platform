@@ -5,7 +5,7 @@ import crypto from 'crypto';
 import pdfDocument from 'pdfkit';
 import fs from 'fs';
 import path from 'path';
-import ConnectionRequest from '../models/connectionRequest.model.js';
+import ConnectionRequest from '../models/connection.model.js';
 
 
 const convertuserDataToPdf = async (userData) => {
