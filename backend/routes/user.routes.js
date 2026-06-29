@@ -6,6 +6,7 @@ import { updateUserProfile } from "../controllers/user.controller.js";
 import { getUserAndProfile } from "../controllers/user.controller.js";
 import { updateProfileData } from "../controllers/user.controller.js";
 import { getAllUserProfiles } from "../controllers/user.controller.js";
+import { downloadProfile } from "../controllers/user.controller.js";
 
 
 const router = express.Router();
@@ -32,6 +33,7 @@ router.route("/login").post(login);
 router.route("/user_update").post(updateUserProfile);
 router.route("/get_user_and_profile").get(getUserAndProfile);
 router.route("/update_profile_data").post(updateProfileData); 
-router.route("/get_all_users").get(getAllUserProfiles);
+router.route("/user/get_all_users").get(getAllUserProfiles);
+router.route("/user/download_resume").get(downloadProfile);
 
 export default router;
